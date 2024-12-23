@@ -1,0 +1,6 @@
+{
+  "name": "Spotify Renotifier",
+  "description": "Increases the priority of Spotify media notifications so they display banners again.",
+  "uuid": "spotify-renotifier@namey5",
+  "shell-version": ["47"]
+}
