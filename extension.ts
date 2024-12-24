@@ -25,18 +25,25 @@ const DEBUG = false;
 
 export default class SpotifyRenotifier extends Extension {
   enable() {
-    const handleNotification = (source, notification) => {
+    const handleNotification = (
+      source: MessageTray.Source,
+      notification: MessageTray.Notification,
+    ) => {
       if (DEBUG) {
         console.log("New notification:");
 
         console.log("  Source:");
         for (const property of MessageTray.Source.list_properties()) {
-          console.log(`    ${property.name}: ${source[property.name]}`);
+          const key = property.name as keyof MessageTray.Source;
+          console.log(`    ${key}: ${source[key]}`);
         }
 
         console.log("  Notification:");
         for (const property of MessageTray.Notification.list_properties()) {
-          console.log(`    ${property.name}: ${notification[property.name]}`);
+          const key = property.name as keyof MessageTray.Notification;
+          if (property.name in notification) {
+            console.log(`    ${key}: ${notification[key]}`);
+          }
         }
       }
 

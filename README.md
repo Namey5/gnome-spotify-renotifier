@@ -1,4 +1,4 @@
-GNOME extension to make Spotify notifications trigger banners again.
+GNOME shell extension to make Spotify notifications trigger banners again.
 
 WARNING
 -----
@@ -8,10 +8,14 @@ This will probably not always work, but I'm uploading because I've seen a few pe
 
 Installation
 -----
-First, clone the repo:
+Building from source requires `npm` and `tsc`:
 ```bash
-git clone https://github.com/Namey5/gnome-spotify-renotifier.git ~/.local/share/gnome-shell/extensions/spotify-renotifier@namey5
+git clone https://github.com/Namey5/gnome-spotify-renotifier.git
+cd gnome-spotify-renotifier
+make install
 ```
+Or extract a release `.zip` to `~/.local/share/gnome-shell/extensions/spotify-renotifier@namey5`.
+
 Then restart your GNOME session and enable the plugin:
 ```bash
 gnome-extensions enable spotify-renotifier@namey5
