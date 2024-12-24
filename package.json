@@ -1,0 +1,19 @@
+{
+  "name": "spotify-renotifier",
+  "version": "0.1.0",
+  "description": "Increases the priority of Spotify media notifications so they display banners again.",
+  "type": "module",
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Namey5/gnome-spotify-renotifier.git"
+  },
+  "author": {
+    "name": "Alex Threlfo"
+  },
+  "license": "GPL-2.0-only",
+  "dependencies": {
+    "@girs/gjs": "^4.0.0-beta.19",
+    "@girs/gnome-shell": "^47.0.0"
+  }
+}
